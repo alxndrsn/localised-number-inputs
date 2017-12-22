@@ -1,10 +1,19 @@
 <html>
-	<head></head>
+	<head>
+		<script>
+			function updateDisplay() {
+				var val = document.getElementById('numberInput').value;
+				document.getElementById('displayer').textContent = val;
+			}
+		</script>
+	</head>
 	<body>
 		<div>
-			<form>
-				<input type="number" step="any"/>
-			</form>
+			<input type="number" step="any" id="numberInput"/>
+			<button onclick="updateDisplay()">Update</button>
+		</div>
+		<div>
+			<p>Entered value: <span id="displayer"></span></p>
 		</div>
 	</body>
 </html>
